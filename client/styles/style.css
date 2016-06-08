@@ -1,0 +1,58 @@
+@font-face {
+	font-family:"CRU-pokawin-Alize pencil";
+	src:url("CRU-pokawin-Alize_pencil-regular.eot?") format("eot"),url("CRU-pokawin-Alize_pencil-regular.woff") format("woff"),url("CRU-pokawin-Alize_pencil-regular.ttf") format("truetype"),url("CRU-pokawin-Alize_pencil-regular.svg#CRU-pokawin-Alizepencil") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+
+body {
+	background-image: url('http://photo.foter.com/photos/pi/273/kitchen-vintage-look-under-counter-mini-fridge-google-image-result-for.jpg');
+	background-repeat: no-repeat;
+	background-position: right top;
+    /*background-attachment: fixed;*/
+	background-size: 110%;
+}
+.app {
+	background-image: url('http://4.bp.blogspot.com/-tRopCPSe4h4/TydMn-jaXdI/AAAAAAAAAQ4/IQW4Ftb-PHo/s1600/Notebook+Paper+2.jpg');
+	background-repeat: no-repeat;
+	background-size: 50%;
+	/*background-attachment: fixed;*/
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+	width: 50%;
+    height: 500px;
+    font-family: "CRU-pokawin-Alize pencil";
+    font-size: 30px;
+
+}
+.g{
+	position: absolute;
+	z-index: 1;
+	top: 22%;
+	right: 45%;
+
+}
+.l{
+	position: absolute;
+	z-index: 1;
+	top: 35%;
+	right: 45%;
+
+}
+.list img{
+
+}
+.listItem {
+	margin-left: 9%;
+}
+.addItem {
+	margin-left: 9%;
+	background-color: transparent;
+    border: 0;
+    font-family:inherit;
+    font-size: 25px;
+
+}
+input {
+}

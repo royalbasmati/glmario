@@ -1,0 +1,26 @@
+ <!-- <ADD ITEM FORM> -->
+      <img class= 'g' src='/assets/g.gif' alt="G" height="150" width="150" />
+      <img class= 'l' src='/assets/l.gif' alt="L" height="100" width="100" />
+
+      <div >
+        <form ng-Submit='add(item)'>
+          <span >
+            <input class= 'addItem' type='text' placeholder='Enter Item Here' ng-Model='item'></input>
+            <!-- <button ng-Click='add(item)'>ADD</button> -->
+          </span>
+        </form>
+      </div>
+      <!-- <END ADD ITEM FORM> -->
+
+      <!-- < LIST DISPLAY> -->
+      <div  >
+        <!-- <h2>List</h2> -->
+        <div class='list' ng-repeat='item in list track by $index'>
+          <span class='listItem'>
+          {{item.item}}
+          <!-- <button ng-click='list.$remove(item)'>X</button> -->
+          <img src='/assets/x.gif' alt="X" height="20" width="20" ng-click='list.$remove(item)' />
+          </span>
+        </div>
+      </div>
+      <!-- <END LIST DISPLAY> -->
