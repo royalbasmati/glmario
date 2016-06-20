@@ -15,7 +15,7 @@ console.log('Grocery List is LISTening on ' + PORT);
 // Initialize Firebase
 firebase.initializeApp({
   databaseURL: "https://project-3889533569816587013.firebaseio.com/",
-  serviceAccount: "/Users/mario/desktop/code/GL/server/GLfirebaseKey.json"
+  serviceAccount: "./server/GLfirebaseKey.json"
 });
 // Initialize firebase db reference
 var db = firebase.database();
