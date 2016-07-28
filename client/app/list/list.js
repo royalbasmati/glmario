@@ -1,6 +1,6 @@
 angular.module('gl.list', [])
 
-.controller('ListCtrl', '$firebaseArray', function($scope, List, $firebaseArray) {
+.controller('ListCtrl', function($scope, List, $firebaseArray) {
 
 	$scope.list = List.then(function(config) {
 		console.log(config.data, 'config');
