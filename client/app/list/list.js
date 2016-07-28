@@ -2,7 +2,7 @@ angular.module('gl.list', [])
 
 .controller('ListCtrl', function($scope, List) {
 
-	$scope.list = List().$$state.value;
+	$scope.list = List().value;
 	console.log($scope.list, 'list');
 
 	$scope.add = function(item) {
