@@ -18,7 +18,6 @@
         <div class='list' ng-repeat='item in list track by $index'>
           <span class='listItem'>
           {{item.item}}
-          <!-- <button ng-click='list.$remove(item)'>X</button> -->
           <img src='/assets/x.gif' alt="X" height="20" width="20" ng-click='list.$remove(item)' />
           </span>
         </div>

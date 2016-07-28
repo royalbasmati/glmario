@@ -9,21 +9,10 @@ angular.module('gl', ['gl.list', 'ngRoute', 'firebase'])
     .otherwise('/list');
 })
 .factory('List', ['$firebaseArray', '$http', function($firebaseArray, $http) {
-
-    //connect to db
-  // var config = {
-  //   apiKey: "AIzaSyD2Mhdg1YKT1WvUUGzJgQm_JklUKGF1nDg",
-  //   authDomain: "project-3889533569816587013.firebaseapp.com",
-  //   databaseURL: "https://project-3889533569816587013.firebaseio.com",
-  //   storageBucket: "project-3889533569816587013.appspot.com",
-  // };
-  // firebase.initializeApp(config);
-  // var db = firebase.database();
-  // var ref = db.ref("/");
-  // console.log(List, 'list');
+  // get firebase config from server
   return $http({
     method: 'GET',
     url: '/api/list'
   });
   
-}])
+}]);

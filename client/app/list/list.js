@@ -23,8 +23,4 @@ angular.module('gl.list', [])
 		$scope.list.$add(listItem);
 	};
 
-	// $scope.remove = function($index){
-	// 	console.log($index);
-	// 	List.set(null);
-	// };
-})
+});
