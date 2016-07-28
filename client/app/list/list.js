@@ -2,11 +2,11 @@ angular.module('gl.list', [])
 
 .controller('ListCtrl', function($scope, List, $firebaseArray) {
 
-	$scope.list = List.then(function(config) {
+	List.then(function(config) {
 		console.log(config.data, 'config');
 		var ref = new Firebase(config.data.databaseURL);
 		var List = ref.child('list');
-		return $firebaseArray(List);
+		$scope.list = $firebaseArray(List);
 	});
 
 	console.log($scope.list, 'list');
