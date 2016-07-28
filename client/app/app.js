@@ -22,13 +22,8 @@ angular.module('gl', ['gl.list', 'ngRoute', 'firebase'])
   // var ref = db.ref("/");
   // console.log(List, 'list');
   return $http({
-      method: 'GET',
-      url: '/api/list'
-    }).then(function(config) {
-      console.log(config.data, 'config');
-      var ref = new Firebase(config.data.databaseURL);
-      var List = ref.child('list');
-      return $firebaseArray(List);
-    });
+    method: 'GET',
+    url: '/api/list'
+  });
   
-  }])
+}])

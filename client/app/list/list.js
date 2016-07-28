@@ -2,7 +2,13 @@ angular.module('gl.list', [])
 
 .controller('ListCtrl', function($scope, List) {
 
-	$scope.list = List;
+	$scope.list = List.then(function(config) {
+		console.log(config.data, 'config');
+		var ref = new Firebase(config.data.databaseURL);
+		var List = ref.child('list');
+		return $firebaseArray(List);
+	});
+	
 	console.log($scope.list, 'list');
 
 	$scope.add = function(item) {
