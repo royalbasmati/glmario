@@ -10,12 +10,14 @@ angular.module('gl', ['gl.list', 'ngRoute', 'firebase'])
 })
 .factory('List', ['$firebaseArray', '$http', function($firebaseArray, $http) {
 
-  return $http({
-    method: 'GET',
-    url: '/api/list'
-  }).then(function(config) {
-    var ref = new Firebase(config.databaseURL);
-    var List = ref.child('list');
-    return $firebaseArray(List);
-  });
+  return function() {
+    return $http({
+      method: 'GET',
+      url: '/api/list'
+    }).then(function(config) {
+      var ref = new Firebase(config.databaseURL);
+      var List = ref.child('list');
+      return $firebaseArray(List);
+    });
+  };
 }]);
