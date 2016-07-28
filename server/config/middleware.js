@@ -1,5 +1,5 @@
 var routes = require('./routes.js');
-var bodyParser  = require('body-parser');
+var bodyParser = require('body-parser');
 var ref = require('../server.js').ref;
 
 
@@ -21,12 +21,7 @@ module.exports = function (app, express) {
 
   // routes(listRouter);
   app.get('/api/list', function(req, res) {
-    res.send({
-      apiKey: process.env.APIKEY,
-      authDomain: process.env.AUTHDOMAIN,
-      databaseURL: process.env.DBURL,
-      storageBucket: process.env.STORAGEBUCKET
-    });
+    res.send(ref);
   });
   
 };
