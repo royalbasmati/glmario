@@ -1,6 +1,6 @@
 angular.module('gl.list', [])
 
-.controller('ListCtrl', function($scope, List) {
+.controller('ListCtrl', '$firebaseArray', function($scope, List, $firebaseArray) {
 
 	$scope.list = List.then(function(config) {
 		console.log(config.data, 'config');
@@ -8,7 +8,7 @@ angular.module('gl.list', [])
 		var List = ref.child('list');
 		return $firebaseArray(List);
 	});
-	
+
 	console.log($scope.list, 'list');
 
 	$scope.add = function(item) {
