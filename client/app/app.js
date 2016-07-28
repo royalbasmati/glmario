@@ -15,7 +15,7 @@ angular.module('gl', ['gl.list', 'ngRoute', 'firebase'])
       method: 'GET',
       url: '/api/list'
     }).then(function(ref) {
-      console.log(ref.data, 'config');
+      console.log(ref, 'config');
       var List = ref.data.child('list');
       return $firebaseArray(List);
     });
