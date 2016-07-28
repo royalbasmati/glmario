@@ -13,16 +13,16 @@ app.listen(PORT);
 console.log('Grocery List is LISTening on ' + PORT);
 
 // Initialize Firebase
-firebase.initializeApp({
-  databaseURL: "https://project-3889533569816587013.firebaseio.com/",
-  serviceAccount: "./server/GLfirebaseKey.json"
-});
-// Initialize firebase db reference
-var db = firebase.database();
-var ref = db.ref("/");
-ref.once("value", function(snapshot) {
-  console.log(snapshot.val());
-});
+// firebase.initializeApp({
+//   databaseURL: "https://project-3889533569816587013.firebaseio.com/",
+//   serviceAccount: "./server/GLfirebaseKey.json"
+// });
+// // Initialize firebase db reference
+// var db = firebase.database();
+// var ref = db.ref("/");
+// ref.once("value", function(snapshot) {
+//   console.log(snapshot.val());
+// });
 // var dbList = ref.child('grocerylist');
 //console.log('dblist', ref);
 // ref.set({list: [{item:'milk', 'date': 5}, {item:'eggs', 'date': 5}, {item:'cheese', 'date': 5}]})

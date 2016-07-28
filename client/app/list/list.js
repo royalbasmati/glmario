@@ -3,7 +3,6 @@ angular.module('gl.list', [])
 .controller('ListCtrl', function($scope, List, $firebaseArray) {
 
 	List.then(function(config) {
-		console.log(config.data, 'config');
 		var ref = new Firebase(config.data.databaseURL);
 		var List = ref.child('list');
 		$scope.list = $firebaseArray(List);
