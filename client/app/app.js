@@ -8,7 +8,7 @@ angular.module('gl', ['gl.list', 'ngRoute', 'firebase'])
     })
     .otherwise('/list');
 })
-.service('List', ['$firebaseArray', '$http', function($firebaseArray, $http) {
+.factory('List', ['$firebaseArray', '$http', function($firebaseArray, $http) {
 
   return {
     getList: $http({
