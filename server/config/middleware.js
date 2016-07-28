@@ -20,10 +20,13 @@ module.exports = function (app, express) {
   // app.use('/api/list', listRouter);
 
   // routes(listRouter);
-  app.get('/api/list', function(){
-  	ref.once("value", function(snapshot) {
-  	console.log(snapshot.val());
-	})
-  })
+  app.get('/api/list', function(req, res) {
+    res.send({
+      apiKey: process.env.APIKEY,
+      authDomain: process.env.AUTHDOMAIN,
+      databaseURL: process.env.DBURL,
+      storageBucket: process.env.STORAGEBUCKET
+    });
+  });
   
 };

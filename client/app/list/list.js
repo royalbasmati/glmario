@@ -1,10 +1,9 @@
 angular.module('gl.list', [])
 
 .controller('ListCtrl', function($scope, List) {
+	$scope.list = List.getList();
 
-	$scope.list = List;
-
-	$scope.add = function(item){
+	$scope.add = function(item) {
 		// console.log(item);
 		var date = new Date();
 		listItem = {
