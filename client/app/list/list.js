@@ -3,6 +3,7 @@ angular.module('gl.list', [])
 .controller('ListCtrl', function($scope, List) {
 
 	$scope.list = List();
+	console.log($scope.list, 'list');
 
 	$scope.add = function(item) {
 		// console.log(item);
